@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Ironforge Gym. Claim your free trial, ask about membership, or get in touch with our team.">
+  <title>Contact | Ironforge Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header scrolled">
+    <div class="container">
+      <a href="./index.html" class="logo">IRONFORGE<span>GYM</span></a>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./classes.html">Classes</a>
+        <a href="./trainers.html">Trainers</a>
+        <a href="./membership.html">Membership</a>
+        <a href="./transformations.html">Transformations</a>
+        <a href="./contact.html" class="active">Contact</a>
+        <a href="./contact.html" class="btn btn-primary">Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container fade-in">
+      <h1>CONTACT US</h1>
+      <p>Get in touch with our team</p>
+    </div>
+  </div>
+
+  <!-- CONTACT INFO CARDS + FORM -->
+  <section class="section-padding">
+    <div class="container">
+
+      <div class="contact-info-cards fade-in">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h3>Visit Us</h3>
+            <p>123 Fitness Ave, Ground Floor<br>Your City, ST 00000</p><!-- CLIENT EDIT -->
+            <p><strong>Hours:</strong><br>
+               Mon–Fri: 5:00 AM – 11:00 PM<br>
+               Sat–Sun: 7:00 AM – 9:00 PM</p><!-- CLIENT EDIT -->
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h3>Call Us</h3>
+            <p>Main: +1 (555) 000-0000</p><!-- CLIENT EDIT -->
+            <p>WhatsApp: 9980908419</p><!-- CLIENT EDIT -->
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h3>Email Us</h3>
+            <p><a href="mailto:info@ironforgegym.com">info@ironforgegym.com</a></p><!-- CLIENT EDIT -->
+            <p><a href="mailto:support@ironforgegym.com">support@ironforgegym.com</a></p><!-- CLIENT EDIT -->
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container fade-in">
+        <h2 style="margin-bottom:8px;">Claim Your Free Trial</h2>
+        <p style="color:var(--text-light); margin-bottom:32px;">
+          Fill in the form and we'll get back to you within 2 hours.<!-- CLIENT EDIT -->
+        </p>
+
+        <!-- Success/Error message shown after submit -->
+        <p id="form-status" style="display:none; padding:12px; border-radius:6px; margin-bottom:16px; font-weight:600;"></p>
+
+        <!-- ============================================================
+             FORMINIT FORM
+             IMPORTANT: Field names MUST start with fi- prefix
+             fi-sender-firstName, fi-sender-lastName, fi-sender-email,
+             fi-sender-phone are for sender info
+             fi-text-fieldname is for any custom text fields
+             ============================================================ -->
+        <form id="contact-form" class="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="fi-sender-firstName" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="fi-sender-lastName" placeholder="Last name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="fi-sender-email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="fi-sender-phone" placeholder="+91 00000 00000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Your Main Goal</label>
+            <select id="goal" name="fi-text-goal" required>
+              <option value="" disabled selected>-- Select your goal --</option>
+              <option value="Lose Weight">Lose Weight &amp; Burn Fat</option>
+              <option value="Build Muscle">Build Muscle &amp; Strength</option>
+              <option value="Improve Cardio">Improve Cardio &amp; Endurance</option>
+              <option value="Athletic Performance">Athletic Performance</option>
+              <option value="General Health">General Health &amp; Wellness</option>
+              <option value="Try a Class">Try a Specific Class</option>
+            </select><!-- CLIENT EDIT: goal options -->
+          </div>
+
+          <div class="form-group">
+            <label for="class-interest">Interested In</label>
+            <select id="class-interest" name="fi-text-interest">
+              <option value="No Preference">No Preference</option>
+              <option value="HIIT Training">HIIT Training</option>
+              <option value="Powerlifting">Powerlifting</option>
+              <option value="Boxing & MMA">Boxing &amp; MMA</option>
+              <option value="Spin Cycling">Spin Cycling</option>
+              <option value="Yoga & Mobility">Yoga &amp; Mobility</option>
+              <option value="Functional Fitness">Functional Fitness</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="fi-text-message" rows="4" placeholder="Any questions or specific requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="font-size:1rem; padding:16px;">
+            CLAIM MY FREE TRIAL <i class="fas fa-arrow-right"></i>
+          </button>
+
+        </form>
+
+        <!-- ============================================================
+             FORMINIT SDK — DO NOT REMOVE THESE TWO SCRIPT TAGS
+             ============================================================ -->
+        <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+        <script>
+          const forminit = new Forminit();
+
+          // ⚠️ YOUR FORM ID — found in forminit.com dashboard
+          const FORM_ID = '1no07w32her';
+
+          const form = document.getElementById('contact-form');
+          const status = document.getElementById('form-status');
+
+          form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.innerHTML = 'SENDING... <i class="fas fa-spinner fa-spin"></i>';
+            status.style.display = 'none';
+
+            const formData = new FormData(form);
+            const { data, error } = await forminit.submit(FORM_ID, formData);
+
+            if (error) {
+              status.style.display = 'block';
+              status.style.background = '#ff4444';
+              status.style.color = '#fff';
+              status.textContent = 'Something went wrong. Please try again.';
+              btn.disabled = false;
+              btn.innerHTML = 'CLAIM MY FREE TRIAL <i class="fas fa-arrow-right"></i>';
+              return;
+            }
+
+            status.style.display = 'block';
+            status.style.background = '#22c55e';
+            status.style.color = '#fff';
+            status.textContent = 'Thank you! We will contact you within 2 hours.';
+            form.reset();
+            btn.disabled = false;
+            btn.innerHTML = 'CLAIM MY FREE TRIAL <i class="fas fa-arrow-right"></i>';
+          });
+        </script>
+
+      </div>
+
+      <!-- GOOGLE MAPS EMBED -->
+      <div class="map-container fade-in">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.473400028!2d-0.24168120641328956!3d51.52855824164937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1689254000000!5m2!1sen!2sus"
+          width="100%" height="400" style="border:0; display:block;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div><!-- REPLACE: embed your real gym location Google Maps URL -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="./index.html" class="footer-logo">IRONFORGE<span>GYM</span></a>
+          <p>Forge your strongest self. Premium training for serious athletes.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./classes.html">Classes</a>
+            <a href="./trainers.html">Trainers</a>
+            <a href="./membership.html">Membership</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <div class="footer-links">
+            <a href="./classes.html">HIIT Training</a>
+            <a href="./classes.html">Powerlifting</a>
+            <a href="./classes.html">Boxing &amp; MMA</a>
+            <a href="./classes.html">Spin Cycling</a>
+            <a href="./classes.html">Yoga &amp; Mobility</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Visit Us</h3>
+          <div class="footer-links">
+            <span><i class="fas fa-map-marker-alt"></i> 123 Fitness Ave, Your City, ST 00000</span>
+            <span><i class="fas fa-clock"></i> Mon–Fri: 5AM–11PM · Sat–Sun: 7AM–9PM</span>
+            <span><i class="fas fa-phone"></i> +1 (555) 000-0000</span>
+            <span><i class="fas fa-envelope"></i> info@ironforgegym.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ironforge Gym. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
